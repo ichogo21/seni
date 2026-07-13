@@ -6,20 +6,28 @@
     <title>Seni - Tech Portfolio & Bio Link</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome Icons (Sudah Diperbaiki) -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            /* Memanggil gambar bg.jpg yang sudah kamu upload dengan overlay gelap agar tulisan tetap terbaca jelas */
+            background-image: linear-gradient(to bottom, rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.85)), url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
     </style>
 </head>
-<body class="bg-[#0b0c10] text-gray-200 min-h-screen flex flex-col items-center py-10 px-4 selection:bg-purple-500 selection:text-white">
+<body class="text-gray-200 min-h-screen flex flex-col items-center py-10 px-4 selection:bg-purple-500 selection:text-white">
 
     <!-- Container Utama -->
-    <div class="w-full max-w-md space-y-8 animate-fade-in">
+    <div class="w-full max-w-md space-y-8 animate-fade-in backdrop-blur-xs bg-[#0b0c10]/40 p-4 rounded-3xl border border-gray-800/20">
         
         <!-- HEADER / HERO SECTION -->
         <div class="text-center space-y-4">
@@ -47,21 +55,21 @@
             </div>
         </div>
 
-        <hr class="border-gray-800 my-4">
+        <hr class="border-gray-800/60 my-4">
 
         <!-- INTERACTIVE WIDGET: ENGAGEMENT CALCULATOR -->
-        <div class="bg-[#12141c] border border-gray-800 p-5 rounded-2xl shadow-xl space-y-4">
+        <div class="bg-[#12141c]/90 border border-gray-800/80 p-5 rounded-2xl shadow-xl space-y-4 backdrop-blur-md">
             <h3 class="text-sm font-semibold tracking-wider text-purple-400 uppercase flex items-center gap-2">
                 <i class="fa-solid fa-chart-simple"></i> Engagement Calculator
             </h3>
             <div class="grid grid-cols-2 gap-3">
                 <div>
                     <label class="text-xs text-gray-400 block mb-1">Followers</label>
-                    <input id="followers" type="number" placeholder="10000" class="w-full bg-[#1f2833] border border-gray-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-purple-500 transition">
+                    <input id="followers" type="number" placeholder="10000" class="w-full bg-[#1f2833]/80 border border-gray-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-purple-500 transition">
                 </div>
                 <div>
                     <label class="text-xs text-gray-400 block mb-1">Avg. Views</label>
-                    <input id="views" type="number" placeholder="2500" class="w-full bg-[#1f2833] border border-gray-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-purple-500 transition">
+                    <input id="views" type="number" placeholder="2500" class="w-full bg-[#1f2833]/80 border border-gray-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-purple-500 transition">
                 </div>
             </div>
             <button onclick="hitungRate()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-2.5 rounded-xl text-sm transition shadow-lg shadow-purple-600/20 active:scale-98">Hitung Rate</button>
@@ -72,13 +80,13 @@
         </div>
 
         <!-- MINI GAME: AI TRIVIA GAME -->
-        <div class="bg-[#12141c] border border-gray-800 p-5 rounded-2xl shadow-xl text-center space-y-4">
+        <div class="bg-[#12141c]/90 border border-gray-800/80 p-5 rounded-2xl shadow-xl text-center space-y-4 backdrop-blur-md">
             <h3 class="text-sm font-semibold tracking-wider text-blue-400 uppercase flex items-center justify-center gap-2">
                 <i class="fa-solid fa-brain"></i> AI Trivia Game
             </h3>
-            <p id="gameQuestion" class="text-sm text-gray-300 font-light min-h-[40px]">"Teknologi AI yang meniru cara kerja jaringan saraf otak manusia disebut apa?"</p>
+            <p id="gameQuestion" class="text-sm text-gray-300 font-light min-h-[40px]">"Model AI yang bisa bikin gambar dari teks (seperti Midjourney) termasuk jenis AI apa?"</p>
             <div id="answerBox" class="hidden font-semibold text-purple-400 text-lg bg-[#1f2833] py-2 rounded-xl border border-gray-700">
-                Neural Network!
+                Generative AI!
             </div>
             <button id="gameBtn" onclick="revealAnswer()" class="text-xs text-gray-400 hover:text-white underline transition">Klik untuk Lihat Jawaban</button>
         </div>
@@ -88,7 +96,7 @@
             <h3 class="text-xs font-semibold tracking-wider text-gray-500 uppercase px-2">Link Penting</h3>
             
             <!-- Menu Telegram -->
-            <a href="https://t.me/+YVnExO7YFuQ0ZDll" target="_blank" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-blue-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
+            <a href="https://t.me/+YVnExO7YFuQ0ZDll" target="_blank" class="group flex items-center justify-between bg-[#12141c]/90 border border-gray-800/80 hover:border-blue-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md backdrop-blur-md">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
                         <i class="fa-brands fa-telegram text-lg"></i>
@@ -99,7 +107,7 @@
             </a>
 
             <!-- Menu Email Bisnis Aktif -->
-            <a href="mailto:kokorangga20@gmail.com?subject=Inquiry%20Kerjasama%20Bisnis" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-purple-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
+            <a href="mailto:kokorangga20@gmail.com?subject=Inquiry%20Kerjasama%20Bisnis" class="group flex items-center justify-between bg-[#12141c]/90 border border-gray-800/80 hover:border-purple-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md backdrop-blur-md">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-envelope text-lg"></i>
