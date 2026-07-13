@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Spline 3D Viewer Script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +25,11 @@
         
         <!-- HEADER / HERO SECTION -->
         <div class="text-center space-y-4">
-            <div class="relative w-28 h-28 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-purple-500/30">
-                <div class="w-full h-full bg-[#1f2833] rounded-full flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-user-astronaut text-4xl text-purple-400"></i>
+            <!-- Tempat Robot 3D -->
+            <div class="relative w-36 h-36 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-purple-500/30 overflow-hidden">
+                <div class="w-full h-full bg-[#1f2833] rounded-full overflow-hidden flex items-center justify-center">
+                    <!-- Embed Robot 3D Spline Kamu -->
+                    <spline-viewer url="https://prod.spline.design/d2cee935-0ca1-4ba5-8fd1-8e7ae6c0ef6c/scene.splinecode" class="w-full h-full scale-125"></spline-viewer>
                 </div>
             </div>
             <div>
