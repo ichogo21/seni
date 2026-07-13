@@ -8,8 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Spline 3D Viewer Script -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +25,9 @@
         <div class="text-center space-y-4">
             <!-- Tempat Robot 3D -->
             <div class="relative w-40 h-40 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-purple-500/30 overflow-hidden">
-                <div class="w-full h-full bg-[#1f2833] rounded-full overflow-hidden flex items-center justify-center">
-                    <!-- Embed Robot 3D Spline Asli Milik Juan -->
-                    <spline-viewer url="https://my.spline.design/aicompanionrobot-VM0bTDqeU7CWpyOKPcMjeSR1/" class="w-full h-full scale-125"></spline-viewer>
+                <div class="w-full h-full bg-[#1f2833] rounded-full overflow-hidden">
+                    <!-- Embed Robot 3D Menggunakan iFrame Aman -->
+                    <iframe src="https://my.spline.design/aicompanionrobot-VM0bTDqeU7CWpyOKPcMjeSR1/" frameborder="0" width="100%" height="100%" class="scale-125"></iframe>
                 </div>
             </div>
             <div>
@@ -69,7 +67,7 @@
             </div>
         </div>
 
-        <!-- MINI GAME: AI TERM GUESSER -->
+        <!-- MINI GAME: AI TRIVIA GAME -->
         <div class="bg-[#12141c] border border-gray-800 p-5 rounded-2xl shadow-xl text-center space-y-4">
             <h3 class="text-sm font-semibold tracking-wider text-blue-400 uppercase flex items-center justify-center gap-2">
                 <i class="fa-solid fa-brain"></i> AI Trivia Game
