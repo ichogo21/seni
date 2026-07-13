@@ -16,45 +16,37 @@
         body { font-family: 'Poppins', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0b0c10] text-gray-200 min-h-screen flex flex-col items-center py-8 px-4 selection:bg-purple-500 selection:text-white relative overflow-x-hidden">
+<body class="bg-[#0b0c10] text-gray-200 min-h-screen flex flex-col items-center py-10 px-4 selection:bg-purple-500 selection:text-white">
 
     <!-- Container Utama -->
-    <div class="w-full max-w-md space-y-6 animate-fade-in relative z-10">
+    <div class="w-full max-w-md space-y-8 animate-fade-in">
         
-        <!-- HEADER / HERO SECTION (Layout Kiri-Kanan) -->
-        <div class="flex items-center justify-between gap-4 bg-[#12141c]/30 p-4 rounded-2xl border border-gray-900">
+        <!-- HEADER / HERO SECTION -->
+        <div class="text-center space-y-4">
+            <!-- Lingkaran Foto Profil (Siap pakai foto kamu) -->
+            <div class="relative w-28 h-28 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-purple-500/30">
+                <div class="w-full h-full bg-[#1f2833] rounded-full overflow-hidden flex items-center justify-center">
+                    <i class="fa-solid fa-user-astronaut text-3xl text-purple-400"></i>
+                </div>
+            </div>
             
-            <!-- SEBELAH KIRI: FOTO PROFIL, NAMA, & SOSMED -->
-            <div class="flex-1 text-left space-y-3">
-                <!-- Lingkaran Foto Profil (Nanti Tinggal Diisi Foto Kamu) -->
-                <div class="relative w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-purple-500/20">
-                    <div class="w-full h-full bg-[#1f2833] rounded-full overflow-hidden flex items-center justify-center">
-                        <i class="fa-solid fa-user-astronaut text-2xl text-purple-400"></i>
-                    </div>
-                </div>
-                <!-- Nama & Bio -->
-                <div>
-                    <h1 class="text-2xl font-bold tracking-wide bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">JUAN</h1>
-                    <p class="text-xs text-gray-400 font-light mt-0.5">Tech & AI Content Creator</p>
-                </div>
-                <!-- Sosial Media -->
-                <div class="flex space-x-4 text-lg pt-1">
-                    <a href="#" class="hover:text-purple-400 transition-colors duration-300"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="hover:text-red-500 transition-colors duration-300"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" class="hover:text-pink-500 transition-colors duration-300"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300"><i class="fa-brands fa-github"></i></a>
-                </div>
+            <!-- Nama & Judul -->
+            <div>
+                <h1 class="text-3xl font-bold tracking-wide bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">JUAN</h1>
+                <p class="text-sm text-gray-400 font-light mt-1">Tech & AI Content Creator</p>
             </div>
-
-            <!-- SEBELAH KANAN: ROBOT 3D (Menyatu Tanpa Kotak Background) -->
-            <div class="w-36 h-36 overflow-hidden bg-transparent flex items-center justify-center">
-                <!-- Embed Robot Spline Langsung Transparan Menyatu dengan Background -->
-                <iframe src="https://my.spline.design/aicompanionrobot-VM0bTDqeU7CWpyOKPcMjeSR1/" frameborder="0" width="140%" height="140%" class="scale-110"></iframe>
+            
+            <!-- Ikon Media Sosial Aktif -->
+            <div class="flex justify-center space-x-6 text-2xl pt-2">
+                <a href="https://www.tiktok.com/@kageyoru.id?_r=1&_t=ZS-97zrux4PBLw" target="_blank" class="hover:text-purple-400 transition-colors duration-300"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@kageyoru20?si=zHH7EmvOD1iSeFWe" target="_blank" class="hover:text-red-500 transition-colors duration-300"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/kage_official20?igsh=Nml5M3RiZm1sN2oy&utm_source=qr" target="_blank" class="hover:text-pink-500 transition-colors duration-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/ichogo21" target="_blank" class="hover:text-blue-400 transition-colors duration-300"><i class="fa-brands fa-github"></i></a>
+                <a href="https://ichogo21.github.io/seni/" target="_blank" class="hover:text-green-400 transition-colors duration-300" title="Website Seni"><i class="fa-solid fa-globe"></i></a>
             </div>
-
         </div>
 
-        <hr class="border-gray-800 my-2">
+        <hr class="border-gray-800 my-4">
 
         <!-- INTERACTIVE WIDGET: ENGAGEMENT CALCULATOR -->
         <div class="bg-[#12141c] border border-gray-800 p-5 rounded-2xl shadow-xl space-y-4">
@@ -90,28 +82,30 @@
             <button id="gameBtn" onclick="revealAnswer()" class="text-xs text-gray-400 hover:text-white underline transition">Klik untuk Lihat Jawaban</button>
         </div>
 
-        <!-- DYNAMIC LINKS LIST -->
+        <!-- LIST LINK PENTING -->
         <div class="space-y-3">
             <h3 class="text-xs font-semibold tracking-wider text-gray-500 uppercase px-2">Link Penting</h3>
             
-            <a href="https://discord.gg" target="_blank" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-purple-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
-                <div class="flex items-center space-x-4">
-                    <div class="w-10 h-10 bg-[#5865F2]/10 rounded-lg flex items-center justify-center text-[#5865F2] group-hover:bg-[#5865F2] group-hover:text-white transition-colors">
-                        <i class="fa-brands fa-discord text-lg"></i>
-                    </div>
-                    <span class="font-medium text-sm">Join My Community Discord</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-xs text-gray-600 group-hover:text-purple-400 transition-colors"></i>
-            </a>
-
-            <a href="mailto:juan@example.com" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-blue-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
+            <!-- Menu Telegram (Ganti dari Discord) -->
+            <a href="https://t.me/+YVnExO7YFuQ0ZDll" target="_blank" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-blue-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
                 <div class="flex items-center space-x-4">
                     <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-telegram text-lg"></i>
+                    </div>
+                    <span class="font-medium text-sm">Join My Telegram Group</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-600 group-hover:text-blue-400 transition-colors"></i>
+            </a>
+
+            <!-- Menu Email Bisnis Aktif -->
+            <a href="mailto:kokorangga20@gmail.com?subject=Inquiry%20Kerjasama%20Bisnis" class="group flex items-center justify-between bg-[#12141c] border border-gray-800 hover:border-purple-500/50 p-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-md">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-envelope text-lg"></i>
                     </div>
                     <span class="font-medium text-sm">Kerjasama Bisnis / Email</span>
                 </div>
-                <i class="fa-solid fa-chevron-right text-xs text-gray-600 group-hover:text-blue-400 transition-colors"></i>
+                <i class="fa-solid fa-chevron-right text-xs text-gray-600 group-hover:text-purple-400 transition-colors"></i>
             </a>
         </div>
 
